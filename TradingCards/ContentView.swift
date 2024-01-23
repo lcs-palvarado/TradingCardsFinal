@@ -9,64 +9,54 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Color.white
-                .ignoresSafeArea()
-               
                     VStack{
-                        Text("San Diego Padres")
-                            .font(.largeTitle)
-                            .foregroundStyle(.black)
-                            .bold()
-                            .padding(.top)
                         
-                        ZStack {
-                            VStack {
-                                Image("Tatis")
-                                    .resizable()
-                                    .scaledToFit()
-                                    
-                                    .mask(Circle())
-                                    
-                                    
-                                    .frame(width: 600, height: 600)
-                                .ignoresSafeArea()
-                                
-                                Spacer()
+                        Image("Tatis")
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(
+                                Ellipse()
+                            )
+                            .overlay {
                                 VStack{
+       
+                                    //Top
                                     HStack{
-                                        Text("#23")
-                                            .backgroundStyle(.black)
-                                            .font(.title)
+                                        Text("Top Left")
+                                            .foregroundStyle(.white)
+                                            .padding(.horizontal)
+                                        
                                         Spacer()
-                                        Image("Padres")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .mask(Circle())
-                                            .frame(width: 50, height: 50)
-                                        HStack{
-                                            Text("Tatis Jr")
-                                            Spacer()
-                                            Text("Shortstop")
-                                        }
+                                        
+                                        Text("Top Right")
+                                            .foregroundStyle(.white)
+                                            .padding(.horizontal)
+                                    }
+                                    
+                                    Spacer()
+                                    
+                                    //Bottom
+                                    HStack{
+                                        Text("Bottom Left")
+                                            .foregroundStyle(.white)
+                                            .padding(.horizontal)
+                                        
+                                        Spacer()
+                                        
+                                        Text("Bottom Right")
+                                            .foregroundStyle(.white)
+                                            .padding(.horizontal)
                                     }
                                 }
+                                
                             }
-                        }
-    
-        
-        
-                        Spacer()
-                        
-                        
-                            .frame(width: 700, height: 800)
                        
                     }
-                    
+                    .frame(width: 400, height: 600)
 
             }
         }
-    }
+    
 
 
 #Preview {
