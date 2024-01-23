@@ -14,15 +14,33 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             
-                VStack {
-                    Image("Tatis")
-                        .resizable()
-                        .scaledToFit()
-                        .mask(Circle())
-                        .padding(.top, 70)
-                    Spacer()
-                }
-                .frame(width: 700, height: 800)
+               
+                    VStack{
+                        Text("San Diego Padres")
+                            .font(.largeTitle)
+                            .foregroundStyle(.black)
+                            .bold()
+                            .padding(.top)
+                        
+                            Image("Tatis")
+                            .resizable()
+                            .scaledToFit()
+                            
+                            .mask(Circle())
+                            
+                            
+                            .frame(width: 600, height: 600)
+                            .ignoresSafeArea()
+    
+        
+        
+                        Spacer()
+                        
+                            .frame(width: 700, height: 800)
+                       
+                    }
+                    
+
             }
         }
     }
