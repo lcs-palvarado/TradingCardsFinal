@@ -9,14 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image("Tatis")
-                .resizable()
-                .scaledToFit()
+        ZStack {
+            Color.white
+                .ignoresSafeArea()
+            
+            
+                VStack {
+                    Image("Tatis")
+                        .resizable()
+                        .scaledToFit()
+                        .mask(Circle())
+                        .padding(.top, 70)
+                    Spacer()
+                }
+                .frame(width: 700, height: 800)
+            }
         }
-        .frame(width: 400, height: 600)
     }
-}
+
 
 #Preview {
     ContentView()
