@@ -29,7 +29,7 @@ struct ContentView: View {
                             
                             Spacer()
                             
-                                Text("Padres")
+                                Text("San Diego Padres")
                                     .foregroundStyle(.white)
                                     .padding(.bottom)
                                     .font(.system(size: 50, design: .serif))
@@ -82,7 +82,7 @@ struct ContentView: View {
             
         }
         .frame(width: 400, height: 600)
-        
+        .background(.black)
     }
 }
     
