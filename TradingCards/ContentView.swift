@@ -42,12 +42,17 @@ struct ContentView: View {
                         //Bottom
                         HStack{
                             VStack {
+                               
                                 Text("#23")
                                     .foregroundStyle(.gray)
                                     .padding(.horizontal)
+                                    .bold()
+                                    .font(.system(size: 15))
                                 
                                 Text("Tatis Jr")
                                     .foregroundStyle(.white)
+                                    .bold()
+                                    .font(.system(size: 20))
                             }
                             
                             Spacer()
@@ -60,9 +65,11 @@ struct ContentView: View {
                                     .frame(width: 75, height: 75)
                                 
                                 
-                                Text("Bottom Right")
+                                Text("Shortstop")
                                     .foregroundStyle(.white)
                                     .padding(.horizontal)
+                                    .bold()
+                                    .font(.system(size: 15))
                             }
                         }
                     }
