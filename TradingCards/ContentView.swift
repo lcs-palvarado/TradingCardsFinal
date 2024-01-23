@@ -19,7 +19,7 @@ struct ContentView: View {
                             )
                             .overlay {
                                 VStack{
-       
+                                    
                                     //Top
                                     HStack{
                                         Text("Top Left")
@@ -37,18 +37,31 @@ struct ContentView: View {
                                     
                                     //Bottom
                                     HStack{
-                                        Text("Bottom Left")
-                                            .foregroundStyle(.white)
-                                            .padding(.horizontal)
+                                        VStack {
+                                            Text("#23")
+                                                .foregroundStyle(.gray)
+                                                .padding(.horizontal)
+                                            
+                                            Text("Tatis Jr")
+                                                .foregroundStyle(.white)
+                                        }
                                         
                                         Spacer()
                                         
-                                        Text("Bottom Right")
-                                            .foregroundStyle(.white)
-                                            .padding(.horizontal)
+                                        VStack {
+                                            Image("Padres")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .clipShape(Circle())
+                                                .frame(width: 75, height: 75)
+                                            
+                                            
+                                            Text("Bottom Right")
+                                                .foregroundStyle(.white)
+                                                .padding(.horizontal)
+                                        }
                                     }
                                 }
-                                
                             }
                        
                     }
