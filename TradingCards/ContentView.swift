@@ -25,16 +25,19 @@ struct ContentView: View {
                         
                         //Top
                         HStack{
-                            Text("Top Left")
-                                .foregroundStyle(.white)
-                                .padding(.horizontal)
+                         
+                            
+                            Spacer()
+                            
+                                Text("Padres")
+                                    .foregroundStyle(.white)
+                                    .padding(.bottom)
+                                    .font(.system(size: 50, design: .serif))
+                                    .frame(height: 15)
                             
                             Spacer()
                             
                             
-                            Text("Top Right")
-                                .foregroundStyle(.white)
-                                .padding(.horizontal)
                         }
                         
                         Spacer()
@@ -45,14 +48,16 @@ struct ContentView: View {
                                
                                 Text("#23")
                                     .foregroundStyle(.gray)
-                                    .padding(.horizontal)
+                                    .padding(.trailing)
+
                                     .bold()
-                                    .font(.system(size: 15))
+                                    .font(.system(size: 20))
                                 
                                 Text("Tatis Jr")
                                     .foregroundStyle(.white)
                                     .bold()
-                                    .font(.system(size: 20))
+                                    .padding(.trailing)
+                                    .font(.system(size: 25))
                             }
                             
                             Spacer()
@@ -69,7 +74,7 @@ struct ContentView: View {
                                     .foregroundStyle(.white)
                                     .padding(.horizontal)
                                     .bold()
-                                    .font(.system(size: 15))
+                                    .font(.system(size: 20))
                             }
                         }
                     }
