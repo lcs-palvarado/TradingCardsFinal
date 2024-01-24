@@ -1,21 +1,32 @@
 //
-//  ContentView.swift
+//  firstPlayer.swift
 //  TradingCards
 //
-//  Created by Pablo Alvarado on 22/01/24.
+//  Created by Pablo Alvarado on 23/01/24.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-  
+import SwiftUI
+
+struct Description: View {
+    let teamName: String
+    let jerseyNumber: String
+    let displayName: String
+    let teamLogo: String
+    let playerImage: String
+    let playerPosition: String
+    
+    
+    
+    
     var body: some View {
         Color.black
             .scaledToFit()
             .frame(width: 420)
         VStack{
             
-            Image("Tatis")
+            Image(playerImage)
                 .resizable()
                 .scaledToFit()
                 .clipShape(
@@ -30,7 +41,7 @@ struct ContentView: View {
                             
                             Spacer()
                             
-                                Text("San Diego Padres")
+                                Text(teamName)
                                     .foregroundStyle(.white)
                                     .padding(.bottom)
                                     .font(.system(size: 50, design: .serif))
@@ -47,14 +58,14 @@ struct ContentView: View {
                         HStack{
                             VStack {
                                
-                                Text("#23")
+                                Text(jerseyNumber)
                                     .foregroundStyle(.gray)
                                     .padding(.trailing)
 
                                     .bold()
                                     .font(.system(size: 20))
                                 
-                                Text("Tatis Jr")
+                                Text(displayName)
                                     .foregroundStyle(.white)
                                     .bold()
                                     .padding(.trailing)
@@ -64,14 +75,14 @@ struct ContentView: View {
                             Spacer()
                             
                             VStack {
-                                Image("Padres")
+                                Image(teamLogo)
                                     .resizable()
                                     .scaledToFit()
                                     .clipShape(Circle())
                                     .frame(width: 75, height: 75)
                                 
                                 
-                                Text("Shortstop")
+                                Text(playerPosition)
                                     .foregroundStyle(.white)
                                     .padding(.horizontal)
                                     .bold()
@@ -86,9 +97,10 @@ struct ContentView: View {
         .background(.black)
     }
 }
-    
+
+    let tatisJr = Description(teamName: "San Diego Padres", jerseyNumber: "#23", displayName: "Tatis Jr", teamLogo: "Padres", playerImage: "Tatis", playerPosition: "Shortstop")
 
 
 #Preview {
-    ContentView()
+    tatisJr
 }
