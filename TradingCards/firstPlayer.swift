@@ -102,7 +102,13 @@ struct Description: View {
 
 let judge = Description(teamName: "NY Yankees", jerseyNumber: "#99", displayName: "Judge", teamLogo: "Yankees", playerImage: "Judge", playerPosition: "RF")
 
+let trout = Description(teamName: "LA Angels", jerseyNumber: "#27", displayName: "Trout", teamLogo: "Angels", playerImage: "Trout", playerPosition: "CF")
+
+let alvarez = Description(teamName: "Houston Astros", jerseyNumber: "#44", displayName: "Alvarez", teamLogo: "Astros", playerImage: "Yordan", playerPosition: "LF/DH")
+
+let freeman = Description(teamName: "LA Dodgers", jerseyNumber: "#5", displayName: "Freeman", teamLogo: "Dodgers", playerImage: "Freeman", playerPosition: "1st Base")
+
 
 #Preview {
-    tatisJr
+    freeman
 }
