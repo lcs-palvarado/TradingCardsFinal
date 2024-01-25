@@ -43,9 +43,9 @@ struct Description: View {
                             
                                 Text(teamName)
                                     .foregroundStyle(.white)
-                                    .padding(.bottom)
+                                    .padding(.top)
                                     .font(.system(size: 50, design: .serif))
-                                    .frame(height: 15)
+                                    .frame(height: 20)
                             
                             Spacer()
                             
@@ -99,6 +99,8 @@ struct Description: View {
 }
 
     let tatisJr = Description(teamName: "San Diego Padres", jerseyNumber: "#23", displayName: "Tatis Jr", teamLogo: "Padres", playerImage: "Tatis", playerPosition: "Shortstop")
+
+let judge = Description(teamName: "NY Yankees", jerseyNumber: "#99", displayName: "Judge", teamLogo: "Yankees", playerImage: "Judge", playerPosition: "RF")
 
 
 #Preview {
