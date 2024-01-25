@@ -11,7 +11,7 @@ import SwiftUI
 struct ListExample: View {
     let playerIcon: String
     let playerName: String
-    let famousQuote: String
+    let nationality: String
     
     var body: some View {
         HStack{
@@ -23,13 +23,14 @@ struct ListExample: View {
              Text(playerName)
                     .font(.title)
                 
-                Text(famousQuote)
+                Text(nationality)
             }
             
         }
+        .frame(width: 400, height: 600)
     }
 }
 
 #Preview {
-    ListExample(playerIcon: <#T##String#>, playerName: <#T##String#>, famousQuote: <#T##String#>)
+    ListExample(playerIcon: "Tatis", playerName: "Fernando Tatis Jr", nationality: "Dominican Republic")
 }
