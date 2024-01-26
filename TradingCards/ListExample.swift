@@ -33,4 +33,5 @@ struct ListExample: View {
 
 #Preview {
     ListExample(playerIcon: "Tatis", playerName: "Fernando Tatis Jr", nationality: "Dominican Republic")
+    
 }
