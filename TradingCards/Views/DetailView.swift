@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DetailView.swift
 //  TradingCards
 //
 //  Created by Pablo Alvarado on 22/01/24.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DetailView: View {
+    
+    let player: TradingCard
   
     var body: some View {
-        Color.black
-            .scaledToFit()
-            .frame(width: 420)
+
         VStack{
             
-            Image("Tatis")
+            Image(player.playerImage)
                 .resizable()
                 .scaledToFit()
                 .clipShape(
@@ -30,11 +30,12 @@ struct ContentView: View {
                             
                             Spacer()
                             
-                                Text("San Diego Padres")
+                            Text(player.teamName)
                                     .foregroundStyle(.white)
                                     .padding(.bottom)
                                     .font(.system(size: 50, design: .serif))
                                     .frame(height: 15)
+                                    .offset(y: 30)
                             
                             Spacer()
                             
@@ -47,14 +48,14 @@ struct ContentView: View {
                         HStack{
                             VStack {
                                
-                                Text("#23")
+                                Text(player.jerseyNumber)
                                     .foregroundStyle(.gray)
                                     .padding(.trailing)
 
                                     .bold()
                                     .font(.system(size: 20))
                                 
-                                Text("Tatis Jr")
+                                Text(player.displayName)
                                     .foregroundStyle(.white)
                                     .bold()
                                     .padding(.trailing)
@@ -64,14 +65,14 @@ struct ContentView: View {
                             Spacer()
                             
                             VStack {
-                                Image("Padres")
+                                Image(player.teamLogo)
                                     .resizable()
                                     .scaledToFit()
                                     .clipShape(Circle())
                                     .frame(width: 75, height: 75)
                                 
                                 
-                                Text("Shortstop")
+                                Text(player.playerPosition)
                                     .foregroundStyle(.white)
                                     .padding(.horizontal)
                                     .bold()
@@ -82,7 +83,7 @@ struct ContentView: View {
                 }
             
         }
-        .frame(width: 400, height: 600)
+
         .background(.black)
     }
 }
@@ -90,5 +91,10 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    DetailView(player: judge)
+        .frame(width: 400, height: 600)
+}
+#Preview {
+    DetailView(player: tatisJr)
+        .frame(width: 400, height: 600)
 }

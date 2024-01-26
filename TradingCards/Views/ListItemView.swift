@@ -1,5 +1,5 @@
 //
-//  ListExample.swift
+//  ListItemView.swift
 //  TradingCards
 //
 //  Created by Pablo Alvarado on 23/01/24.
@@ -8,10 +8,8 @@
 import SwiftUI
 
 
-struct ListExample: View {
-    let playerIcon: String
-    let playerName: String
-    let nationality: String
+struct ListItemView: View {
+    let player: TradingCard
     
     var body: some View {
 //        HStack{
@@ -27,12 +25,12 @@ struct ListExample: View {
 //            }
 //            
 //        }
-        Text(playerName)
+        Text(player.displayName)
         //.frame(width: 400, height: 600)
     }
 }
 
 #Preview {
-    ListExample(playerIcon: "Tatis", playerName: "Fernando Tatis Jr", nationality: "Dominican Republic")
+    ListItemView(player: tatisJr)
     
 }
