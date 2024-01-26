@@ -14,20 +14,21 @@ struct ListExample: View {
     let nationality: String
     
     var body: some View {
-        HStack{
-            Image(playerIcon)
-                .resizable()
-                .clipShape(Circle())
-                .frame(width: 50, height: 50)
-            VStack(alignment: .leading) {
-             Text(playerName)
-                    .font(.title)
-                
-                Text(nationality)
-            }
-            
-        }
-        .frame(width: 400, height: 600)
+//        HStack{
+//            Image(playerIcon)
+//                .resizable()
+//                .clipShape(Circle())
+//                .frame(width: 50, height: 50)
+//            VStack(alignment: .leading) {
+//             Text(playerName)
+//                    .font(.title)
+//                
+//                Text(nationality)
+//            }
+//            
+//        }
+        Text(playerName)
+        //.frame(width: 400, height: 600)
     }
 }
 

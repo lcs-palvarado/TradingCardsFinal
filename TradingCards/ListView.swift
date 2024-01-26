@@ -10,11 +10,14 @@ import SwiftUI
 struct ListView: View {
     var body: some View {
         
-        NavigationStack{
+        NavigationView{
             List{
                 
-                NavigationLink(destination: tatisJr){
-                    ListExample(playerIcon: "Tatis", playerName: "Fernando Tatis Jr", nationality: "Dominican Republic")}
+                NavigationLink(
+                    destination: tatisJr
+                ){
+                    ListExample(playerIcon: "Tatis", playerName: "Fernando Tatis Jr", nationality: "Dominican Republic")
+                }
                 
                 NavigationLink(destination: judge){
                     ListExample(playerIcon: "Judge", playerName: "Aaron Judge", nationality: "United States of America")}
@@ -30,10 +33,10 @@ struct ListView: View {
             }
         }
         .navigationTitle("My Favorite Players")
-        .frame(width: 400, height: 600)
+        .frame(width: 800, height: 600)
     }
         
-    }
+}
 
 
 #Preview {
